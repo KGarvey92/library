@@ -1,0 +1,38 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(library.jpeg);
+}
+
+header {
+    background-color: bisque;
+    opacity: 90%;
+    width: 70%;
+    text-align: center;
+}
+
+main {
+    flex: 9;
+    background-color: lemonchiffon;
+    opacity: 90%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 1rem;
+}
+
+footer {
+    background-color: bisque;
+    opacity: 90%;
+    width: 70%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;   
+}
