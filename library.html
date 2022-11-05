@@ -26,15 +26,15 @@
                     <td>Lorem</td>
                     <td>Lorem</td>
                     <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td><img src="x-square.svg" class="removeBtn" alt="remove book"></td>
+                    <td>Unread<img class="readIcon" src="images/eye.svg" alt="toggle read/unread"></td>
+                    <td><img src="/images/x-square.svg" class="removeBtn" alt="remove book"></td>
                 </tr>
                 <tr>
                     <td>Lorem</td>
                     <td>Lorem</td>
                     <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td><img src="x-square.svg" class="removeBtn" alt="remove"></td>
+                    <td>Read<img class="readIcon" src="images/eye.svg" alt="toggle read/unread"></td>
+                    <td><img src="/images/x-square.svg" class="removeBtn" alt="remove"></td>
                 </tr>
             </thead>
         </table>
@@ -42,17 +42,17 @@
         <form action="/" method="post">
             <div class="formContainer">
                 <div class="inputField">
-                    <label for="title"><input type="text" name="title" id="title" placeholder="Title" ></label>
+                    <label for="title"><input type="text" name="title" id="title" placeholder="Title" required minlength="2"></label>
                 </div>
                 <div class="inputField">
-                    <label for="author"><input type="text" name="author" id="author" placeholder="Author" ></label>
+                    <label for="author"><input type="text" name="author" id="author" placeholder="Author" required minlength="2"></label>
                 </div>
                 <div class="inputField">
-                    <label for="length"><input type="number" name="length" id="length" placeholder="Number of pages" ></label>
+                    <label for="length"><input type="number" name="length" id="length" placeholder="Number of pages" required></label>
                 </div>
                 <div class="inputField ">
                     <label for="readStatus">Read<input type="radio" name="readStatus" id="read" value="read" required></label>
-                    <label for="readStatus">Unread<input type="radio" name="readStatus" id="unread" value="unread"></label>
+                    <label for="readStatus">Unread<input type="radio" name="readStatus" id="unread" value="unread" required></label>
                 </div>
             </div>
             <button class="submitBtn" type="submit">Submit New Book</button>

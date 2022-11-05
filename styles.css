@@ -5,7 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url(library.jpeg);
+    background-image: url(/images/library.jpeg);
 }
 
 header {
@@ -36,12 +36,12 @@ table {
     margin-bottom: 1rem;
 }
 
-.removeBtn:hover {
+.removeBtn:hover, .readIcon:hover {
     cursor: pointer;
     scale:1.1;
 }
 
-.removeBtn:active {
+.removeBtn:active, .readIcon:active {
     scale: 1;
 }
 
@@ -83,6 +83,11 @@ th, td {
     padding: 0.5rem;
     border: 1px solid;
     width: 25%;
+}
+
+.readIcon {
+    vertical-align: middle;
+    margin-left: 12px;
 }
 
 footer {
