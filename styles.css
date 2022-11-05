@@ -36,6 +36,15 @@ table {
     margin-bottom: 1rem;
 }
 
+.removeBtn:hover {
+    cursor: pointer;
+    scale:1.1;
+}
+
+.removeBtn:active {
+    scale: 1;
+}
+
 h2 {
     font-size: 1.2rem;
 }
@@ -52,11 +61,10 @@ form {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    row-gap: 1rem;
+    gap: 1rem 2.5%;
 }
 
 .formContainer .inputField {
-    flex: 1;
     align-self: center;
 }
 
@@ -64,7 +72,7 @@ label {
 display: inline-flex;
 align-items: center;
 gap: 4px;
-margin-right: 10px;
+margin-right: 12px;
 }
 
 input {

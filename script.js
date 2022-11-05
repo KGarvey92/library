@@ -21,3 +21,12 @@ function displayBooks() {
 function addBookToLibrary() {
 
 }
+
+const submitBtn  = document.querySelector('.submitBtn');
+
+submitBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+})
+
+
