@@ -20,7 +20,39 @@ myLibrary.push(harryPotterStone);
 
 // loops through array and displays books
 function displayBooks() {
+    const table = document.querySelector('thead');
     for (book of myLibrary) {
+        const row = document.createElement('tr');
+        table.appendChild(row);
+        const title = document.createElement('td');
+        title.innerText = `${book.title}`;
+        row.appendChild(title);
+        const author = document.createElement('td');
+        author.innerText = `${book.author}`;
+        row.appendChild(author);
+        const length = document.createElement('td');
+        length.innerText = `${book.length}`;
+        row.appendChild(length);
+        
+        const status = document.createElement('td');
+        status.innerText = `${book.status}`;
+        row.appendChild(status);
+        
+        const readIcon = document.createElement('img');
+        readIcon.src = 'images/eye.svg';
+        readIcon.alt = 'toggle read/unread';
+        readIcon.classList.add('readIcon');
+        status.appendChild(readIcon);
+        
+        const remove = document.createElement('td');
+        row.appendChild(remove);
+        
+        const removeIcon = document.createElement('img');
+        removeIcon.src = 'images/x-square.svg';
+        removeIcon.alt = 'remove book';
+        removeIcon.classList.add('removeBtn');
+        remove.appendChild(removeIcon);
+
     }
 }
 
@@ -40,6 +72,7 @@ function removeBook() {
 
 }
 
+displayBooks();
 
 
 const form  = document.querySelector('form');
