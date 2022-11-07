@@ -66,9 +66,12 @@ function addBookToLibrary() {
 
 }
 
-// TODO: 
+// TODO: Remove table in order for it to be recreated with updated library
 function destroyTable() {
-    
+    const tbody = document.querySelector('tbody');
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.lastChild);
+    }
 }
 
 // function to remove book from library
