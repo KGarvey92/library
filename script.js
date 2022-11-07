@@ -20,6 +20,7 @@ myLibrary.push(northernLights);
 const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'Unread');
 myLibrary.push(theHobbit);
 
+displayBooks();
 
 // loops through array and displays books
 function displayBooks() {
@@ -75,7 +76,6 @@ function removeBook() {
 
 }
 
-displayBooks();
 
 // allow users to add new books
 const form  = document.querySelector('form');
