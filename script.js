@@ -23,7 +23,7 @@ myLibrary.push(theHobbit);
 // initialise read and remove button variables
 
 let readButtons;
-let removeButtons
+let removeButtons;
 
 //display library
 displayBooks();
@@ -67,11 +67,12 @@ function displayBooks() {
         removeIcon.alt = 'remove book';
         removeIcon.classList.add('removeBtn');
         remove.appendChild(removeIcon);
-    
+    }
     // update read and remove buttons for event listeners
     readButtons = document.querySelectorAll('.readIcon');
+    changeReadStatus(readButtons);
     removeButtons = document.querySelectorAll('.removeBtn');
-    }
+    
 }
 
 
@@ -113,18 +114,21 @@ form.addEventListener('submit', function (e) {
 })
 
 // TODO: event listener for read button
-
-    console.log(readButtons);
-    readButtons.forEach(item => item.addEventListener('click', () => {
-        if (item.parentNode.firstChild.textContent === 'Read') {
-            item.parentNode.firstChild.textContent = 'Unread';
-        }
-        else {
-            item.parentNode.firstChild.textContent = 'Read';
-        }
-    }))
+    function changeReadStatus(readButtons) {
+        readButtons.forEach(item => item.addEventListener('click', () => {
+            let bookIndex = item.parentNode.dataset.attribute;
+            if (item.parentNode.firstChild.textContent === 'Read') {
+                item.parentNode.firstChild.textContent = 'Unread';
+                myLibrary[bookIndex].status = 'Unread';
+            }
+            else {
+                item.parentNode.firstChild.textContent = 'Read';
+                myLibrary[bookIndex].status = 'Read';
+            }
+        }))
+    }
 
 // TODO: event listener for remove button
 
-    console.log(removeButtons);
+    //console.log(removeButtons);
 
