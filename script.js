@@ -86,10 +86,6 @@ function destroyTable() {
 
 // TODO: function to remove book from library
 
-function removeBook() {
-
-}
-
 
 // allow users to add new books
 const form  = document.querySelector('form');
@@ -113,7 +109,7 @@ form.addEventListener('submit', function (e) {
     document.querySelector('input[name=readStatus]:checked').checked = false;
 })
 
-// TODO: event listener for read button
+// Event listener for read button
     function changeReadStatus(readButtons) {
         readButtons.forEach(item => item.addEventListener('click', () => {
             let bookIndex = item.parentNode.dataset.attribute;
@@ -128,7 +124,7 @@ form.addEventListener('submit', function (e) {
         }))
     }
 
-// TODO: event listener for remove button
+// TODO: Remove book functionality
 
     //console.log(removeButtons);
 
