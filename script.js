@@ -23,7 +23,7 @@ myLibrary.push(northernLights);
 
 // loops through array and displays books
 function displayBooks() {
-    const table = document.querySelector('thead');
+    const table = document.querySelector('tbody');
     for (let i = 0; i < myLibrary.length; i++) {
         const row = document.createElement('tr');
         row.dataset.attribute = [i];
@@ -60,12 +60,13 @@ function displayBooks() {
     }
 }
 
-// function that allows users to add new books
+// TODO: Allows users to add new books
 
 function addBookToLibrary() {
 
 }
 
+// TODO: 
 function destroyTable() {
     
 }
