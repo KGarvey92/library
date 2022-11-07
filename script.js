@@ -20,6 +20,12 @@ myLibrary.push(northernLights);
 const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'Unread');
 myLibrary.push(theHobbit);
 
+// initialise read and remove button variables
+
+let readButtons;
+let removeButtons
+
+//display library
 displayBooks();
 
 // loops through array and displays books
@@ -42,9 +48,12 @@ function displayBooks() {
         length.dataset.attribute = [i];
         row.appendChild(length);
         const status = document.createElement('td');
-        status.innerText = `${myLibrary[i].status}`;
+        const answer = document.createElement('span');
+        answer.classList.add('readSpan');
+        answer.innerText = `${myLibrary[i].status}`;
         status.dataset.attribute = [i];
         row.appendChild(status);
+        status.appendChild(answer);
         const readIcon = document.createElement('img');
         readIcon.src = 'images/eye.svg';
         readIcon.alt = 'toggle read/unread';
@@ -58,6 +67,10 @@ function displayBooks() {
         removeIcon.alt = 'remove book';
         removeIcon.classList.add('removeBtn');
         remove.appendChild(removeIcon);
+    
+    // update read and remove buttons for event listeners
+    readButtons = document.querySelectorAll('.readIcon');
+    removeButtons = document.querySelectorAll('.removeBtn');
     }
 }
 
@@ -99,4 +112,19 @@ form.addEventListener('submit', function (e) {
     document.querySelector('input[name=readStatus]:checked').checked = false;
 })
 
+// TODO: event listener for read button
+
+    console.log(readButtons);
+    readButtons.forEach(item => item.addEventListener('click', () => {
+        if (item.parentNode.firstChild.textContent === 'Read') {
+            item.parentNode.firstChild.textContent = 'Unread';
+        }
+        else {
+            item.parentNode.firstChild.textContent = 'Read';
+        }
+    }))
+
+// TODO: event listener for remove button
+
+    console.log(removeButtons);
 

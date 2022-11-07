@@ -31,7 +31,6 @@ main {
 table {
     border: 1px solid;
     width: 95%;
-    text-align: justify;
     border-collapse: collapse;
     margin-bottom: 1rem;
 }
@@ -83,11 +82,16 @@ th, td {
     padding: 0.5rem;
     border: 1px solid;
     width: 25%;
+    text-align: center;
 }
 
 .readIcon {
     vertical-align: middle;
-    margin-left: 12px;
+}
+
+.readSpan {
+    display: inline-block;
+    width: 75px;
 }
 
 footer {
