@@ -125,7 +125,7 @@ form.addEventListener('submit', function (e) {
         }))
     }
 
-// TODO: Remove book functionality
+// Remove book functionality
     function removeBook(removeButtons) {
         removeButtons.forEach(item => item.addEventListener('click', () => {
             let confirmation = confirm('Are you sure?');
@@ -137,4 +137,19 @@ form.addEventListener('submit', function (e) {
             destroyTable();
             displayBooks();
         }))
+    }
+
+
+// Sorting function
+    function sortTable(property) {
+        if (property === 'length') {
+            myLibrary.sort((a, b) => {
+                return a.length - b.length;
+            })
+        }
+        else {
+            myLibrary.sort((a, b) => a[property].toLowerCase().localeCompare(b[property].toLowerCase()));
+            }
+        destroyTable();
+        displayBooks();
     }
