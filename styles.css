@@ -41,16 +41,16 @@ th div {
     gap: 0.2rem;
 }
 
-th img {
+.sortIcon {
     height: 1rem;
 }
 
-th img:hover {
+.sortIcon:hover {
     cursor: pointer;
     scale: 1.4;
 }
 
-th img:active {
+.sortIcon:active {
     scale: 1.2;
 }
 

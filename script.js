@@ -25,6 +25,12 @@ myLibrary.push(theHobbit);
 let readButtons;
 let removeButtons;
 
+// event listener for sort buttons
+const sortButtons = document.querySelectorAll('.sortIcon');
+sortButtons.forEach(item => item.addEventListener('click', () => {
+    sortTable(item.dataset.property, item.dataset.direction);
+}));
+
 //display library
 displayBooks();
 
@@ -84,9 +90,6 @@ function destroyTable() {
         tbody.removeChild(tbody.lastChild);
     }
 }
-
-// TODO: function to remove book from library
-
 
 // allow users to add new books
 const form  = document.querySelector('form');
