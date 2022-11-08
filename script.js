@@ -72,6 +72,7 @@ function displayBooks() {
     readButtons = document.querySelectorAll('.readIcon');
     changeReadStatus(readButtons);
     removeButtons = document.querySelectorAll('.removeBtn');
+    removeBook(removeButtons);
     
 }
 
@@ -125,6 +126,15 @@ form.addEventListener('submit', function (e) {
     }
 
 // TODO: Remove book functionality
-
-    //console.log(removeButtons);
-
+    function removeBook(removeButtons) {
+        removeButtons.forEach(item => item.addEventListener('click', () => {
+            let confirmation = confirm('Are you sure?');
+            if (!confirmation) {
+                return 0;
+            }
+            let bookIndex = item.parentNode.dataset.attribute;
+            myLibrary.splice(bookIndex, 1);
+            destroyTable();
+            displayBooks();
+        }))
+    }
