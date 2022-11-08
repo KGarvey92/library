@@ -35,6 +35,21 @@ table {
     margin-bottom: 1rem;
 }
 
+th img {
+    height: 1rem;
+    margin-inline: 1rem;
+    vertical-align: middle;
+}
+
+th img:hover {
+    cursor: pointer;
+    scale: 1.4;
+}
+
+th img:active {
+    scale: 1.2;
+}
+
 .removeBtn:hover, .readIcon:hover {
     cursor: pointer;
     scale:1.1;
