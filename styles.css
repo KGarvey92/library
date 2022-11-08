@@ -35,10 +35,14 @@ table {
     margin-bottom: 1rem;
 }
 
+th div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 th img {
     height: 1rem;
-    margin-inline: 1rem;
-    vertical-align: middle;
 }
 
 th img:hover {
