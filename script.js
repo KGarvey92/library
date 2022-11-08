@@ -141,15 +141,27 @@ form.addEventListener('submit', function (e) {
 
 
 // Sorting function
-    function sortTable(property) {
-        if (property === 'length') {
-            myLibrary.sort((a, b) => {
-                return a.length - b.length;
-            })
+    function sortTable(property, direction) {
+        if (direction === 'asc') {
+            if (property === 'length') {
+                myLibrary.sort((a, b) => {
+                    return a.length - b.length;
+                })
+            }
+            else {
+                myLibrary.sort((a, b) => a[property].toLowerCase().localeCompare(b[property].toLowerCase()));
+                }
         }
         else {
-            myLibrary.sort((a, b) => a[property].toLowerCase().localeCompare(b[property].toLowerCase()));
+            if (property === 'length') {
+                myLibrary.sort((a, b) => {
+                    return b.length - a.length;
+                })
             }
+            else {
+                myLibrary.sort((a, b) => b[property].toLowerCase().localeCompare(a[property].toLowerCase()));
+                }
+        }
         destroyTable();
         displayBooks();
     }
