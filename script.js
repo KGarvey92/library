@@ -1,14 +1,17 @@
 let myLibrary = [];
 
-function Book(title, author, length, status) {
-    this.title = title;
-    this.author = author;
-    this.length = length;
-    this.status = status;
-}
 
-Book.prototype.info = function() {
-        return `${this.title} by ${this.author}, ${this.length}, ${this.status}`;
+class Book {
+    constructor(title, author, length, status) {
+        this.title = title;
+        this.author = author;
+        this.length = length;
+        this.status = status;
+    }
+
+    info() {
+            return `${this.title} by ${this.author}, ${this.length}, ${this.status}`; 
+    }
 }
 
 const harryPotterStone = new Book('Harry Potter and the Philsopher\'s Stone', 'J.K Rowling', 223, 'Read');
